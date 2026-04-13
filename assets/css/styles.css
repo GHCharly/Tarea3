@@ -30,9 +30,10 @@ body {
    ========================== */
 
 #header {
+    /* Sin bootstrap debemos quitar este comentario
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     background-color: #c8e6c9;
     padding: 20px;
 }
@@ -53,16 +54,16 @@ body {
 /* ==========================
    NAVEGACIÓN PRINCIPAL
    ========================== */
-
+/* --No usar si estamos usando bootstrap
 #nav {
     background-color: #2e7d32;
 }
 
-#nav ul {
+#nav ul {  
     list-style: none;
     display: flex;
     justify-content: right;
-}
+} 
 
 #nav ul li a {
     display: block;
@@ -75,28 +76,37 @@ body {
 #nav ul li a:hover {
     background-color: #1b5e20;
 }
+*/
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+
 
 /* ==========================
    LAYOUT ASIDE + MAIN
    ========================== */
 
 #layout {
+/*  Sin bootstrap debemos quitar este comentario   
     display: flex;
+    gap: 20px;*/
     padding: 20px;
-    gap: 20px;
 }
 
 /* ASIDE */
 #aside {
-    width: 25%;
+    /* width: 25%; Sin bootstrap debemos quitar este comentario*/
     background-color: #bbdefb;
     padding: 20px;
 }
 
 /* MAIN */
+/* Sin bootstrap debemos quitar este comentario
 #main {
     width: 75%;
-}
+} */
 
 /* ==========================
    ARTICLES
@@ -166,10 +176,10 @@ body {
     }
 
     /* HEADER: se apila */
-    #header {
+/*     #header { --- solo si no se usa bootstrap
         flex-direction: column;
         text-align: center;
-    }
+    } */
 
     .header-left img {
         max-width: 100%;
@@ -180,8 +190,8 @@ body {
         max-width: 100%;
     }
 
-    /* NAVEGACIÓN: menú vertical */
-    #nav ul {
+    /* NAVEGACIÓN: menú vertical Solo si no se esta usando bootstrap */
+/*     #nav ul {
         flex-direction: column;
         align-items: center;
     }
@@ -189,17 +199,17 @@ body {
     #nav ul li a {
         width: 100%;
         text-align: center;
-    }
+    } */
 
     /* LAYOUT: Aside y Main en columna */
-    #layout {
+/*     #layout {  ---Solo si no se esta usando bootstrap
         flex-direction: column;
     }
 
     #aside,
     #main {
         width: 100%;
-    }
+    } */
 
     /* GALERÍA: imágenes una debajo de otra */
     #gallery {
