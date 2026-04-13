@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 3 – Diseño Responsivo</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
     <!-- FONDO PRINCIPAL -->
-    <div id="wrapper">
+    <div id="wrapper" class="container">
 
         <!-- HEADER -->
-        <header id="header">
+        <header id="header" class="d-flex flex-column flex-md-row justify-content-between align-items-center">
             <div class="header-left">
                 <!-- Imagen o información referencial -->
                 <img src="assets/img/header.jpg" alt="Imagen referencial">
@@ -29,21 +34,59 @@
             </div>
         </header>
 
+        <div id="carouselExample" class="carousel slide my-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+        
+                <div class="carousel-item active">
+                    <img src="assets/img/gallery-desktop.jpg" class="d-block w-100" alt="Desktop">
+                </div>
+        
+                <div class="carousel-item">
+                    <img src="assets/img/gallery-mobile.jpg" class="d-block w-100" alt="Mobile">
+                </div>
+        
+                <div class="carousel-item">
+                    <img src="assets/img/gallery-mediaqueries.jpeg" class="d-block w-100" alt="Media Queries">
+                </div>
+        
+            </div>
+        
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+        
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
         <!-- NAVEGACIÓN PRINCIPAL -->
-        <nav id="nav">
-            <ul>
-                <li><a href="#header">Inicio</a></li>
-                <li><a href="#layout">Responsivo</a></li>
-                <li><a href="#aside">Viewport</a></li>
-                <li><a href="#main">Media Queries</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container-fluid">
+        
+                <a class="navbar-brand" href="#">Tarea 3</a>
+        
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#header">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#layout">Responsivo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#aside">Viewport</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#main">Media Queries</a></li>
+                    </ul>
+                </div>
+        
+            </div>
         </nav>
 
         <!-- CONTENEDOR ASIDE + MAIN -->
-        <div id="layout">
+        <div id="layout" class="row">
 
             <!-- ASIDE -->
-            <aside id="aside">
+            <aside id="aside" class="col-md-4 col-lg-3">
                 <h2>Principios del diseño responsivo</h2>
                 <ul>
                     <li>Uso de layouts flexibles</li>
@@ -58,7 +101,7 @@
             </aside>
 
             <!-- MAIN -->
-            <main id="main">
+            <main id="main" class="col-md-8 col-lg-9">
 
                 <!-- ARTÍCULO 1 -->
                 <article class="article">
@@ -82,6 +125,7 @@
         </div>
 
         <!-- GALERÍA DE IMÁGENES (DEBAJO DE ASIDE + MAIN) -->
+        
         <section id="gallery">
             <img src="assets/img/gallery-desktop.jpg" alt="Ejemplo de diseño en desktop">
             <img src="assets/img/gallery-mobile.jpg" alt="Ejemplo de diseño en dispositivo móvil">
@@ -113,6 +157,10 @@
             </p>
         </div>
     </footer>
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
 </html>
